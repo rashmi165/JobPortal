@@ -1,0 +1,82 @@
+<app-femenu></app-femenu>
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="jumbotron">Details Component{{pathId}}</h1>
+    </div>
+</div><div class="row">
+    <div class="col-md-8 col-md offset 2 well cards" *ngFor="let x of jobsInfo">
+        <div class="row">
+            <div class="col-md-10 col-sm-12 col-xs-12">
+                    <h5><span class="glyphicon glyphicon-briefcase"></span>{{x.title}}</h5>
+                    <h6 class="text-danger"> {{x.company}}</h6>
+                    <p>
+                        <span class="glyphicon glyphicon-dashboard"> </span>{{x.exp}} &nbsp;&nbsp;&nbsp;
+                        <span class="glyphicon glyphicon-map-marker"> </span> {{x.Location}}
+                    </p>
+            </div>
+                <div class="col-md-2 col-sm-12 col-xs-12">
+                        <img src="{{x.logo}}" class="img-responsive img-thumbnail" alt="">
+                </div>
+                
+
+        </div>
+            <div class="row bg-primary">
+                <div class="col-md-6">
+                    <p>Salary: {{x.salary}}</p>
+                </div>
+              
+            </div>
+            <!--Job Requirements-->
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+                    <h6 class="text-info">Job Requirements:</h6>
+                    <p class="text-justify">{{x.requirements}}</p>
+                  </div>
+
+            </div>
+<!-- Key Skills-->
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+                        <h6 class="text-info">Key Skills:</h6>
+                        <p class="text-justify">{{x.keySkills}}</p> 
+                </div>
+
+            </div>
+            <!--Role-->
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+                        <h6 class="text-info">Role:</h6>
+              <p class="text-justify">{{x.role}}</p> 
+                </div>
+
+            </div>
+            <!--Positions-->
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+             <h6 class="text-info">Positions:</h6>
+              <p class="text-justify">{{x.positions}}</p> 
+                </div>
+
+            </div>
+            <!-- Company Profile-->
+            <div class="row">
+                <div class="col-md-12 col-xs-12 col-sm-12">
+             <h6 class="text-info" style="color:brown">Company Profile:</h6>
+             <h5> {{x.company}}</h5>
+              <p class="text-justify">{{x.profile}}</p> 
+                </div>
+
+            </div>
+            <!--COntact Details-->
+            <div class="row">
+                    <div class="col-md-12 col-xs-12 col-sm-12">
+                        <details>
+                            <summary>Contact Details</summary>
+                            <p class="text-justify"><a href="{{x.contact}}" > {{x.contact}}</a></p> 
+                            <p class="text-justify">Email: <a href="mailto:{{x.email}}" > {{x.email}}</a></p>
+                        </details>
+                                   
+                    </div>
+
+    </div>
+</div>

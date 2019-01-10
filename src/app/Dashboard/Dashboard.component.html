@@ -1,0 +1,104 @@
+<app-adminmenu></app-adminmenu>
+<div class="container">
+    <div class="row">
+<input type="button" class="button" Value="New">
+<input type="button" class="button" Value="Edit">
+<input type="button" class="button" Value="Delete">
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 col-xs-12 col-sm-12">
+            <div class="table table-resposnive">
+                <table class="table table-bordered table-condensed table-striped">
+                    <tr>
+                        <th>
+                            Id
+                        </th>
+                        <th>Title</th>
+                        <th>Company</th>
+                        <th>Exp</th>
+                        <th>Location</th>
+                        <th>Salary</th>
+                        <th>logo</th>
+                        <th>Positions</th>
+                        <th>
+                            role
+                        </th>
+                        <th>Requirements</th>
+                        <th>Keyskills</th>
+                        <th>Profile</th>
+                        <th>Contact</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+
+                    </tr>
+                    <tr *ngFor="let x of jobslist">
+                        <td>{{x.id}}</td>
+                        <td>{{x.title}}</td>
+                        <td>{{x.company}}</td>
+                        <td>{{x.exp}}</td>
+                        <td>{{x.Location}}</td>
+                        <td>{{x.salary}}</td>
+                        <td><img src="{{x.logo}}" class="img-respoonsive" alt=""></td>
+                        <td>{{x.positions}}</td>
+                        <td>{{x.role}}</td>
+                        <td>
+                            <details>
+                        <summary>Requirements</summary>
+                        <p>{{x.requirements}}</p>
+                            </details></td>
+                        <td>{{x.keySkills}}</td>
+                        
+                        <td>
+                            <details>
+                                <summary>
+                                Profile
+                                </summary>
+                                <p>{{x.profile}}</p>
+                            </details></td>
+                        <td>{{x.Contact}}</td>
+                        <td>{{x.Email}}</td>
+                        <td>
+                            <div class="btn-group">
+                                <a href routerLink="/edit/{{x.id}}" class="btn btn-info">
+                                     <span class="glyphicon glyphicon-edit"></span>
+                                </a>
+                                <a href  routerLink="/delete/{{x.id}}" class="btn btn-danger">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </a>
+                            </div>
+                        </td>
+                        
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--<div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form #userData="ngForm" (ngSubmit)="onFormSubmit(userData.value)">
+                <fieldset>
+                    <legend class="text-center">JobsPortal Admin</legend>
+                <div class="form-group">
+                    <label for="name">Title</label>
+                    <input type="text" name="title" id="title" class="form-control" required ngModel #name="ngModel" autofocus>
+                    <div class="alert alert-danger" *ngIf="!title.valid && (title.dirty || title.touched)">
+                        title field should not be empty.</div>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" name="company" id="company" class="form-control" required ngModel #email="ngModel" autofocus>
+                    <div class="alert alert-danger" *ngIf="!company.valid && (company || company.touched)">Company name shouldn't be empty.</div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Login" class="btn btn-warning" [disabled]=!person.valid>
+                    <input type="Clear" value="Clear" class="btn btn-primary">
+                </div>
+            </fieldset>
+            </form>
+        </div>
+    </div>-->
+
+</div>
+
+

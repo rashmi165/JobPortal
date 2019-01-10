@@ -1,0 +1,36 @@
+<app-femenu></app-femenu>
+<div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="jumbotron text-center">{{title}}</h1>
+    
+            </div>
+    
+        </div>
+    
+        <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <form #login="ngForm" (ngSubmit)="onLogin(login.value)">
+                        <fieldset>
+                            <legend class="text-center">JobsPortal Admin</legend>
+                        <div class="form-group">
+                            <label for="name">UserName</label>
+                            <input type="text" name="username" id="username" class="form-control" autofocus required  ngModel #username="ngModel" autofocus >
+                            <div class="alert alert-danger" *ngIf="!username.valid && (username.dirty || username.touched)">
+                                UserName is required</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="Password">Password</label>
+                            <input type="password" name="password" id="password" class="form-control" required ngModel #password="ngModel" autofocus>
+                            <div class="alert alert-danger" *ngIf="!password.valid && (password.dirty || password.touched)">Password field should be minimum 6 characters.</div>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Login" class="btn btn-warning" [disabled]=!login.valid>
+                            <input type="Clear" value="Clear" class="btn btn-primary">
+                        </div>
+                    </fieldset>
+                    </form>
+                </div>
+            </div>
+       
+    </div>

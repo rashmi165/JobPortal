@@ -1,0 +1,108 @@
+<app-adminmenu>
+
+</app-adminmenu>
+<div class="row">
+    <div class="container">
+        <div class="col-md-12 col xs 12">
+            <div class="jumbotron">
+                <h1 class="text-center">Edit Component{{jobId}}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+        <div class="col-md-6 col-md-offset-3" *ngFor="let obj of jobInfo">
+            <form  (ngSubmit)="onUpdate(obj)">
+                <div class="form-group">
+                    <label for="id">ID</label>
+                    <input type="number" name="id" id="id" [(ngModel)]="obj.id" readonly  class="form-control" required>
+    
+                </div>
+                <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" name="title" id="title" [(ngModel)]="obj.title"  class="form-control" required>
+        
+                    </div>
+                    <div class="form-group">
+                            <label for="company">company</label>
+                            <input type="text" name="company" id="company" [(ngModel)]="obj.company"  class="form-control" required>
+            
+                        </div>
+    
+                        <div class="form-group">
+                                <label for="exp">Exp</label>
+                                <input type="text" name="exp" id="exp" [(ngModel)]="obj.exp"  class="form-control" required>
+                
+                            </div>
+    
+    
+                            <div class="form-group">
+                                    <label for="location">Location</label>
+                                    <input type="text" name="location" id="location" [(ngModel)]="obj.location"  class="form-control" required>
+                    
+                                </div>
+    
+                                <div class="form-group">
+                                        <label for="salary">Salary</label>
+                                        <input type="text" name="salary" id="salary" [(ngModel)]="obj.salary"  class="form-control" required>
+                        
+                                    </div>
+    
+                                    <div class="form-group">
+                                            <label for="logo">Logo</label>
+                                            <input type="url" name="logo" id="logo" [(ngModel)]="obj.logo"  class="form-control" required>
+                            
+                                        </div>
+    
+                                        <div class="form-group">
+                                                <label for="position">Position</label>
+                                                <input type="text" name="position" id="position" [(ngModel)]="obj.positions"  class="form-control" required>
+                                
+                                            </div>
+                                            <div class="form-group">
+                                                        <label for="role">Role</label>
+                                                        <input type="text" name="role" id="role" [(ngModel)]="obj.role"  class="form-control" required>
+                                        
+                                                    </div>
+    
+                                                    <div class="form-group">
+                                                            <label for="requirements">Requirements</label>
+                                                          <textarea name="requirements" id="requirements" [(ngModel)]="obj.requirements"  required cols="30" rows="10" class="form-control"></textarea>
+                                            
+                                                        </div>
+    
+                                                        <div class="form-group">
+                                                                <label for="keyskilld">KeySkills</label>
+                                                                <input type="text" name="keyskills" id="keyskills" [(ngModel)]="obj.keyskills"  class="form-control" required>
+                                                
+                                                            </div>
+    
+                                                            
+                                                        <div class="form-group">
+                                                                <label for="profile">Profile</label>
+                                                                <textarea name="profile" id="profile" [(ngModel)]="obj.profile"  required cols="30" rows="10" class="form-control"></textarea>
+                                                
+                                                            </div>
+    
+                                                            
+                                                        <div class="form-group">
+                                                                <label for="contact">Contact</label>
+                                                                <input type="text" name="contact" id="contact" [(ngModel)]="obj.contact"  class="form-control" required>
+                                                
+                                                            </div>
+    
+                                                            <div class="form-group">
+                                                                    <label for="email">Email</label>
+                                                                    <input type="email" name="email" id="email" [(ngModel)]="obj.email"  class="form-control" required>
+                                                    
+                                                                </div>
+    
+                                                                <div class="form-group">
+                                                                       <input type="submit" value="Update" class="btn btn-info">
+                                                                        <input type="reset" value="Reset" class="btn btn-danger">
+                                                        
+                                                                    </div>
+            </form>
+        </div>
+    </div>
